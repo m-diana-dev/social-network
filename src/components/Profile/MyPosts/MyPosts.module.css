@@ -1,0 +1,39 @@
+.posts {
+    padding: 20px 25px;
+}
+
+.ptitle {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.padd {
+    margin-bottom: 50px;
+}
+
+.padd textarea {
+    width: 100% !important;
+    height: 80px !important;
+    resize: none;
+    border: 1px solid #e0e1e3;
+    display: block;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.padd button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #757788;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    max-width: 250px;
+    width: 100%;
+    transition: all .3s;
+}
+
+.padd button:hover {
+    background-color: #57d8f9;
+}

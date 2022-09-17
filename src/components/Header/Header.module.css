@@ -1,0 +1,11 @@
+/*----------HEADER----------*/
+.header {
+    grid-area: h;
+    background-color: #757788;
+    padding: 10px;
+}
+
+.header img {
+    height: 100%;
+    object-fit: cover;
+}

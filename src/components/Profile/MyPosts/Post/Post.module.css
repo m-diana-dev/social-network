@@ -1,0 +1,54 @@
+.item {
+    position: relative;
+}
+
+.item:not(:last-child) {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #e0e1e3;
+}
+
+.item_wrapp {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.item_img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 1px solid #e0e1e3;
+}
+
+.item_text {}
+
+.item_like {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    font-size: 12px;
+}
+
+
+.item_like img {
+    width: 20px;
+    height: 20px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.item_like img:hover {
+    transform: scale(1.1);
+}
