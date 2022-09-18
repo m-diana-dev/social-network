@@ -82,9 +82,9 @@ body {
 }
 
 .app-wrapper {
-  max-width: 1200px;
+  /* max-width: 1200px;
+  margin: 0 auto; */
   height: 100%;
-  margin: 0 auto;
   padding: 0 15px;
   display: grid;
   grid-template-areas:

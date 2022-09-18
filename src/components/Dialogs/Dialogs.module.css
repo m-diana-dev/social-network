@@ -1,0 +1,43 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 3fr 10fr;
+}
+
+.dialogsItems {
+    font-size: 17px;
+    border-right: 1px solid #e0e1e3;
+
+}
+
+.dialog a {
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e1e3;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.dialog a:hover {
+    background-color: #757788;
+}
+
+.dialog.active {
+    background-color: #757788;
+}
+
+.messages {
+    padding: 20px;
+    font-size: 16px;
+}
+
+.message {
+    padding: 20px;
+    background-color: #e0e1e3;
+    width: fit-content;
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.message:not(:last-child) {
+    margin-bottom: 10px;
+}
