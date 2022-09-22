@@ -1,0 +1,9 @@
+.title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.friends {
+    display: flex;
+    gap: 15px;
+}
