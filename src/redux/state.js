@@ -1,3 +1,4 @@
+import { renderEntireTree } from "../render"
 
 let state = {
     profilePage: {
@@ -30,6 +31,16 @@ let state = {
             { img: "https://img.freepik.com/premium-vector/cute-dog-head-avatar_79416-67.jpg", name: "Margo" }
         ]
     }
+}
+
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5,
+        message: postMessage,
+        likes: 0
+    };
+    state.profilePage.postsData.unshift(newPost);
+    renderEntireTree(state);
 }
 
 export default state;

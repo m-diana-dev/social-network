@@ -12,10 +12,10 @@ const App = (props) => {
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Menu appData={props.appData.sidebar}/>
+        <Menu appData={props.appData.sidebar} />
         <main className="app-wrapper-content">
           <Routes>
-            <Route path="/profile" element={<Profile appData={props.appData.profilePage} />} />
+            <Route path="/profile" element={<Profile appData={props.appData.profilePage} addPost={props.addPost} />} />
             <Route path="/dialogs/*" element={<Dialogs appData={props.appData.messagePage} />} />
             <Route path="/news" element={<News />} />
           </Routes>

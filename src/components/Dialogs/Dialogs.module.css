@@ -30,6 +30,34 @@
     font-size: 16px;
 }
 
+.messages textarea {
+    width: 100% !important;
+    height: 80px !important;
+    resize: none;
+    border: 1px solid #e0e1e3;
+    display: block;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+.messages button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #757788;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    max-width: 250px;
+    width: 100%;
+    transition: all .3s;
+}
+
+.messages button:hover {
+    background-color: #57d8f9;
+}
+
 .message {
     display: flex;
     align-items: flex-end;
