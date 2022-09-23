@@ -7,6 +7,7 @@ let state = {
                 { id: 1, message: 'I love sleeping with my man.', likes: 15 },
                 { id: 2, message: 'Before you can reach my master, you must pass through me.', likes: 18 },
             ],
+        newPostText: "Hello!"
     },
     messagePage: {
         dialogsData:
@@ -22,7 +23,8 @@ let state = {
                 { id: 1, message: "Hi!" },
                 { id: 2, message: "Good morning, dog" },
                 { id: 3, message: "Go to the yard" },
-            ]
+            ],
+        newMessageText: "Hello!"
     },
     sidebar: {
         friendsData: [
@@ -33,13 +35,37 @@ let state = {
     }
 }
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
     let newPost = {
         id: 5,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         likes: 0
     };
     state.profilePage.postsData.unshift(newPost);
+    state.profilePage.newPostText = '';
+    renderEntireTree(state);
+}
+
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    renderEntireTree(state);
+}
+
+
+export let sendMessage = () => {
+    let newMessage = {
+        id: 5,
+        message: state.messagePage.newMessageText,
+    };
+    if (newMessage.message) {
+        state.messagePage.messageData.push(newMessage);
+        state.messagePage.newMessageText = '';
+        renderEntireTree(state);
+    }
+}
+
+export let updateNewMessageText = (newText) => {
+    state.messagePage.newMessageText = newText;
     renderEntireTree(state);
 }
 
