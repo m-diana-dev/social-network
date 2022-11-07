@@ -50,23 +50,6 @@ let store = {
         this._callSubscriber = observer
     },
 
-    sendMessage() {
-        let newMessage = {
-            id: 5,
-            message: this._state.messagePage.newMessageText,
-        };
-        if (newMessage.message) {
-            this._state.messagePage.messageData.push(newMessage);
-            this._state.messagePage.newMessageText = '';
-            this._callSubscriber(this._state);
-        }
-    },
-
-    updateNewMessageText(newText) {
-        this._state.messagePage.newMessageText = newText;
-        this._callSubscriber(this._state);
-    },
-
     dispatch(action) {
         this._state.profilePage = profileReducer(this._state.profilePage, action);
         this._state.messagePage = messageReducer(this._state.messagePage, action);
