@@ -6,20 +6,18 @@ import { sendMessageActionCreator, updateNewMessageTextActionCreator } from '../
 
 
 const Dialogs = (props) => {
-
-    let state = props.store.getState().messagePage;
-    // let dialogsElements = props.dialogData.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />);
-    // let messagesElements = props.dialogData.messageData.map(message => <MessageItem message={message.message} />);
-    let dialogsElements = state.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />);
-    let messagesElements = state.messageData.map(message => <MessageItem message={message.message} />);
+    let dialogsElements = props.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />);
+    let messagesElements = props.messageData.map(message => <MessageItem message={message.message} />);
 
     let sendMessage = () => {
-        props.dispatch(sendMessageActionCreator());
+        // props.dispatch(sendMessageActionCreator());
+        props.sendMessage();
     }
 
     let onMessageChange = (e) => {
         let text = e.target.value;
-        props.dispatch(updateNewMessageTextActionCreator(text));
+        props.onMessageChange(text);
+        // props.dispatch(updateNewMessageTextActionCreator(text));
     }
 
     return (
@@ -29,7 +27,7 @@ const Dialogs = (props) => {
             </div>
             <div className={classes.messages}>
                 {messagesElements}
-                <textarea onChange={onMessageChange} value={props.dialogData.newMessageText} />
+                <textarea onChange={onMessageChange} value={props.newMessageText} />
                 <button onClick={sendMessage}>Отправить</button>
             </div>
         </div >
