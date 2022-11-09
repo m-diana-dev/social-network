@@ -12,7 +12,7 @@ const App = (props) => {
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Menu appData={props.appData.sidebar} />
+        <Menu appData={props.appData.sidebar} dispatch={props.dispatch} store={props.store} />
         <main className="app-wrapper-content">
           <Routes>
             <Route path="/profile" element={<Profile store={props.store} />} />
