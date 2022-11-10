@@ -23,7 +23,7 @@ const Menu = (props) => {
                     </li>
                 </ul>
             </nav>
-            <Friends store={props.store} />
+            <Friends />
         </div>
     )
 }
