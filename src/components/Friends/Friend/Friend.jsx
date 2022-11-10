@@ -3,7 +3,7 @@ import classes from './Friend.module.css';
 const Friend = (props) => {
     let deleteFriend = (e) => {
         let friendElement = e.target.id;
-        props.dispatch(deleteFriendActionCreator(friendElement));
+        props.deleteFriend(friendElement);
     }
 
     return (
