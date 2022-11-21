@@ -1,28 +1,34 @@
 import StoreContext from '../../StoreContext';
-import FriendContainer from './Friend/FriendContainer';
 import classes from './Friends.module.css';
+
+
 const Friends = (props) => {
+    let deleteFriend = (e) => {
+        let friendElement = e.target.id;
+        console.log(friendElement);
+        props.deleteFriend(friendElement);
+    }
+
+    let friendElements = props.friendsData.map(friend => {
+        return (
+            <div className={classes.friend}>
+                <div className={classes.imgWrapp}>
+                    <img src={friend.img} className={classes.img} alt="avatar"></img>
+                    <button onClick={deleteFriend} className={classes.delete}><img id={friend.id} src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" alt="delete"></img></button>
+                </div>
+                <span>{friend.name}</span>
+            </div>
+        )
+    })
     return (
-        <StoreContext>{
-            (store) => {
-
-                let state = store.getState().sidebar;
-                let dispatch = store.dispatch;
-                let friendElements = state.friendsData.map(friend => <FriendContainer id={friend.id} img={friend.img} name={friend.name} dispatch={dispatch} />)
-
-                return (
-                    <div>
-                        <div className={classes.title}>Friends</div>
-                        <div className={classes.friends}>
-                            {friendElements}
-                        </div>
-                    </div>
-                )
-            }
-        }
-
-        </StoreContext>
+        <div>
+            <div className={classes.title}>Friends</div>
+            <div className={classes.friends}>
+                {friendElements}
+            </div>
+        </div>
     )
 }
+
 
 export default Friends;

@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import Friends from '../Friends/Friends';
+import FriendsContainer from '../Friends/FriendsContainer';
 import classes from './Menu.module.css';
 const Menu = (props) => {
     return (
@@ -23,7 +23,7 @@ const Menu = (props) => {
                     </li>
                 </ul>
             </nav>
-            <Friends />
+            <FriendsContainer />
         </div>
     )
 }
