@@ -11,12 +11,14 @@ let initialState = {
 const sidebarReducer = (state = initialState, action) => {
     switch (action.type) {
         case DELETE_FRIEND:
+            let stateCopy = { ...state };
+            stateCopy.friendsData = [...state.friendsData];
             let idFriend = action.idFriend;
-            const index = state.friendsData.findIndex(n => n.id === Number(idFriend));
+            const index = stateCopy.friendsData.findIndex(n => n.id === Number(idFriend));
             if (index !== -1) {
-                state.friendsData.splice(index, 1);
+                stateCopy.friendsData.splice(index, 1);
             }
-            return state;
+            return stateCopy;
         default:
             return state;
     }
