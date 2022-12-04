@@ -16,6 +16,9 @@ const Menu = (props) => {
                         <NavLink to="/news" className={menuLink => menuLink.isActive ? classes.active : null}>News</NavLink>
                     </li>
                     <li className={classes.item}>
+                        <NavLink to="/users" className={menuLink => menuLink.isActive ? classes.active : null}>Users</NavLink>
+                    </li>
+                    <li className={classes.item}>
                         <a href="#">Music</a>
                     </li>
                     <li className={classes.item}>

@@ -94,3 +94,21 @@
 .userItem button:hover {
     background-color: #57d8f9;
 }
+
+.usersBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #757788;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    max-width: 250px;
+    width: 100%;
+    transition: all .3s;
+    margin-bottom: 30px;
+}
+
+.usersBtn:hover {
+    background-color: #57d8f9;
+}
