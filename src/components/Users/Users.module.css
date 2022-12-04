@@ -1,0 +1,96 @@
+.users {
+    padding: 15px;
+}
+
+.users h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.usersItems img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #757788;
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.userItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.userItemInner {
+    display: flex;
+    align-items: center;
+}
+
+.userItem:not(:last-child) {
+    position: relative;
+}
+
+.userItem:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #909198;
+}
+
+.userItemWrapp {
+    margin-right: 50px;
+}
+
+.userItemName {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    transition: all .3s;
+}
+
+.userItemName:hover {
+    color: #57d8f9;
+}
+
+.userItemLocation {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.userItemLocation span:not(:last-child) {
+    margin-right: 5px;
+}
+
+.userItem button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #757788;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    max-width: 250px;
+    width: 100%;
+    transition: all .3s;
+}
+
+.userItem button.unfollow {
+    background-color: #a8a8ad;
+}
+
+.userItem button:hover {
+    background-color: #57d8f9;
+}
