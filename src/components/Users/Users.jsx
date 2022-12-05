@@ -4,15 +4,12 @@ import axios from "axios";
 import userAvatar from '../../assets/images/avatar.jpg'
 
 class Users extends React.Component {
-    constructor(props) {
-        super(props);
-        alert("new");
+
+    componentDidMount() {
         axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-            // debugger;
             this.props.setUsers(response.data.items);
         })
     }
-
 
     render() {
         return (
